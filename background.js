@@ -1,4 +1,4 @@
-const allowedUrl = "https://florian-timm.de/geoportal/";
+const allowedUrl = "http://lverkpw002.fhhnet.stadt.hamburg.de/";
 
 chrome.action.onClicked.addListener((tab) => {
   if (tab.url.startsWith(allowedUrl)) {

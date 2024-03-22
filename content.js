@@ -23,5 +23,3 @@ function _injectScript() {
 _injectScript();
 
 console.log("content.js loaded")
-
-console.log(map)
