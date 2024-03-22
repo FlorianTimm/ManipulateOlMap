@@ -20,17 +20,27 @@
       "128": "images/icon-128.png"
     }
   },
-  "permissions": ["activeTab"],
+  "permissions": [
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "js": ["content.js"],
-      "matches": ["https://example.com/*"]
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "https://florian-timm.de/*"
+      ]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["inject.js"],
-      "matches": ["https://example.com/*"]
+      "resources": [
+        "inject.js"
+      ],
+      "matches": [
+        "https://florian-timm.de/*"
+      ]
     }
   ]
 }

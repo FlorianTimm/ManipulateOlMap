@@ -1,3 +1,5 @@
+//document.body.style.backgroundColor = "red";
+
 chrome.runtime.onMessage.addListener((request) => {
   if (request.code === "INJECT_SCRIPT") {
     retrievePageVariable();
@@ -19,3 +21,7 @@ function _injectScript() {
 }
 
 _injectScript();
+
+console.log("content.js loaded")
+
+console.log(map)
