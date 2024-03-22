@@ -18,19 +18,22 @@ map.addLayer(layer);
 map.getView().setZoom(10);
 map.getView().setCenter(ol.proj.fromLonLat([7.6261, 51.9607]));
 
-let vs = ol.source.Vector();
-let vl = new ol.layer.Vector({
-  source: vs,
-});
-map.addLayer(vl);
+
 
 let f = new ol.Feature({
   geometry: new ol.geom.Point(ol.proj.fromLonLat([7.6261, 51.9607])),
 });
-vs.addFeature(f);
+
 f.setStyle(new ol.style.Style({
   image: new ol.style.Icon({
     src: "https://openlayers.org/en/latest/examples/data/icon.png",
-    scale: 0.1,
+    //scale: 0.1,
   }),
 }));
+
+let vs = new ol.source.Vector({ features: [f] });
+console.log(vs.getFeatures());
+let vl = new ol.layer.Vector({
+  source: vs,
+});
+map.addLayer(vl);
