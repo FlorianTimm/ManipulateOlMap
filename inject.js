@@ -1,7 +1,7 @@
 document.addEventListener("retrievePageVariable", () => {
   document.dispatchEvent(
     new CustomEvent("variableRetrieved", {
-      detail: page,
+      detail: vs,
     })
   );
 });
